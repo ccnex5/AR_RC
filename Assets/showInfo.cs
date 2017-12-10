@@ -1,21 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class showInfo : MonoBehaviour {
 
+//	public GameObject kitten;
+	public kittenController kitten;
 	public GameObject canvas;
-	public GameObject[] canvases;
+	public Text canvasText;
+
 
 	void Start(){
-		canvases = GameObject.FindGameObjectsWithTag ("InfoTag"); 
-		canvas = GameObject.FindGameObjectWithTag ("Canvas");
-//		info = canvases [0];
-		canvas.GetComponent<CanvasGroup> ().alpha = 0f;
+//		kitten = GameObject.FindGameObjectWithTag ("Player");
+
+
 	}
 	void OnCollisionEnter(Collision col){
-		if (col.gameObject.tag == "Player") {
-			canvas.GetComponent<CanvasGroup> ().alpha = 1f;
-		}
+		canvasText.text = "The duck is a number of species in the Anatidae family of birds. Can you find the other members of this family?";
+		canvas.SetActive(true);
+		kitten.StartingQuestPosition ();
 	}
 }

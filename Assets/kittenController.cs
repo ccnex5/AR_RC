@@ -8,9 +8,11 @@ public class kittenController : MonoBehaviour {
 	private Rigidbody rb;
 	//private Animation anim;
 	// Use this for initialization
+//	private Transform resetTransform;
 	void Start () {
 		rb = GetComponent<Rigidbody> ();
 		//anmi = GetComponentInParent<Animation> ();
+//		resetTransform = new Vector3(0,0,0);
 	}
 	
 	// Update is called once per frame
@@ -31,5 +33,8 @@ public class kittenController : MonoBehaviour {
 			anim.Play ("idle");
 		}
 		*/
+	}
+	public void StartingQuestPosition(){
+		transform.position = new Vector3 (0, 0, 0);
 	}
 }
