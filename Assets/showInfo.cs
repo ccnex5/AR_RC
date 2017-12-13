@@ -8,16 +8,18 @@ public class showInfo : MonoBehaviour {
 //	public GameObject kitten;
 	public kittenController kitten;
 	public GameObject canvas;
-	public Text canvasText;
+	public Text textObject;
+	public string canvasText;
 
 
 	void Start(){
 //		kitten = GameObject.FindGameObjectWithTag ("Player");
-
-
+		textObject = GameObject.FindWithTag("CanvasTextTag").GetComponent(typeof(Text)) as Text;
+		Debug.Log (textObject + " this is the textObject");
 	}
 	void OnCollisionEnter(Collision col){
-		canvasText.text = "The duck is a number of species in the Anatidae family of birds. Can you find the other members of this family?";
+
+		textObject.text = canvasText;
 		canvas.SetActive(true);
 		kitten.StartingQuestPosition ();
 	}
