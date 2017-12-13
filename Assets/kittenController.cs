@@ -11,8 +11,6 @@ public class kittenController : MonoBehaviour {
 //	private Transform resetTransform;
 	void Start () {
 		rb = GetComponent<Rigidbody> ();
-		//anmi = GetComponentInParent<Animation> ();
-//		resetTransform = new Vector3(0,0,0);
 	}
 	
 	// Update is called once per frame
@@ -26,13 +24,6 @@ public class kittenController : MonoBehaviour {
 			transform.eulerAngles = new Vector3 (transform.eulerAngles.x, Mathf.Atan2(x,y)*Mathf.Rad2Deg,transform.eulerAngles.z);
 
 		}
-		/*
-		if (x != 0 && y != 0) {
-			anim.Play ("walk");
-		} else {
-			anim.Play ("idle");
-		}
-		*/
 	}
 	public void StartingQuestPosition(){
 //		transform.position = new Vector3 (0, 0, 0);
