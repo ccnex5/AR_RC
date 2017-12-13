@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
 public class kittenController : MonoBehaviour {
-
+	public int velocity;
 	private Rigidbody rb;
 	//private Animation anim;
 	// Use this for initialization
@@ -19,7 +19,9 @@ public class kittenController : MonoBehaviour {
 		float y = CrossPlatformInputManager.GetAxis ("Vertical");
 
 		Vector3 movement = new Vector3 (x, 0, y);
-		rb.velocity = movement * 4f;
+
+//		rb.velocity = movement * 4f;
+		rb.velocity = movement * velocity; 
 		if(x!=0 && y!=0){
 			transform.eulerAngles = new Vector3 (transform.eulerAngles.x, Mathf.Atan2(x,y)*Mathf.Rad2Deg,transform.eulerAngles.z);
 
