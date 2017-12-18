@@ -54,7 +54,7 @@ Material:
     - _TranslucencyViewDependency: 1
     - _test: 9.021464
     m_Colors:
-    - _Color: {r: 0.44144568, g: 0.74264705, b: 0.23480748, a: 1}
+    - _Color: {r: 0.74264705, g: 0.71813065, b: 0.23480752, a: 1}
     - _Emission: {r: 0, g: 0, b: 0, a: 0}
     - _Scale: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0, g: 0, b: 0, a: 0}
