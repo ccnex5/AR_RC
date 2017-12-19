@@ -15,7 +15,7 @@ public class showInfo : MonoBehaviour {
 	void Start(){
 //		kitten = GameObject.FindGameObjectWithTag ("Player");
 		textObject = GameObject.FindWithTag("CanvasTextTag").GetComponent(typeof(Text)) as Text;
-		Debug.Log (textObject + " this is the textObject");
+//		Debug.Log (textObject + " this is the textObject");
 	}
 	void OnCollisionEnter(Collision col){
 
